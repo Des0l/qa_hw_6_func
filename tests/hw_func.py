@@ -85,7 +85,9 @@ def test_readable_function():
 def format_function_call(func, *args, **kwargs):
     readable_name = func.__name__.replace("_", " ").title()
     all_args = [str(arg) for arg in args] + [str(value) for value in kwargs.values()]
-    return f"{readable_name} [{', '.join(all_args)}]"
+    result = f"{readable_name} [{', '.join(all_args)}]"
+    print(result)
+    return result
 
 
 def open_browser(browser_name):
